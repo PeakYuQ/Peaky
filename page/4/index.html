@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="There is no description"><title>NoteBook | Always believe that something wonderful is about to hanppen!</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="/css/dark.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+var toggle = document.querySelector('.darkmode-toggle');
+var html = document.querySelector('html');
+
+html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+
+toggle.addEventListener('click', () => {
+localStorage.dark = !(html.dataset.dark == 'true');
+html.dataset.dark = localStorage.dark;
+});</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NoteBook</h1><a id="logo" href="/.">NoteBook</a><p class="description">Always believe that something wonderful is about to hanppen!</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"><a href="/2020/10/02/51a34670.html">no-title</a></h1><div class="post-meta">2020-10-02</div><div class="post-content"><h1 id="一-html"><a href="#一-html" class="headerlink" title="一.html"></a>一.html</h1><h2 id="1-抽取公共部分"><a href="#1-抽取公共部分" class="headerlink" title="1.抽取公共部分"></a>1.抽取公共部分</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">抽取片段		th:fragment=&quot;sidebar&quot;</span><br><span class="line">引用片段		&lt;div th:replace=&quot;head::sidebar&quot;&gt;&lt;/div&gt;</span><br><span class="line">连接带信息用（）引用</span><br><span class="line">&lt;div th:replace=&quot;commons/bars::sidebar(activeUri = &#x27;main.html&#x27;)&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-引入webjar依赖"><a href="#2-引入webjar依赖" class="headerlink" title="2.引入webjar依赖"></a>2.引入webjar依赖</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> &lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.webjars&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;jquery&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;3.3.1&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></div><p class="readmore"><a href="/2020/10/02/51a34670.html">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/09/25/61901496.html">no-title</a></h1><div class="post-meta">2020-09-25</div><div class="post-content"><p>​    </p>
+<p>​    红米4x的主板，换到红米3的手机中到底是否能开机?</p>
+<p>​    两个手机现在都正常，大型大脑移植手术是否可行？</p></div><p class="readmore"><a href="/2020/09/25/61901496.html">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/09/23/7f36550b.html">no-title</a></h1><div class="post-meta">2020-09-23</div><div class="post-content"><p>​    说起下载工具，大家是不是还在使用迅雷、电驴、旋风等等下载器呢？曾经的种子下载风靡一时，通宵下载也是常事，随着时代的进步嘛，一代产品接着一代，今天要介绍的，就是我在使用的电脑端下载神器：IDM！</p></div><p class="readmore"><a href="/2020/09/23/7f36550b.html">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/09/21/30300b5a.html">no-title</a></h1><div class="post-meta">2020-09-21</div><div class="post-content"><h1 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h1><table>
+<thead>
+<tr>
+<th><a target="_blank" rel="noopener" href="http://www.sixia.xyz/">小众导航</a></th>
+<th><a target="_blank" rel="noopener" href="http://hao.xuewps.com/">办公导航</a></th>
+<th><a target="_blank" rel="noopener" href="http://gongju.dadiyouhui.cn/beijing/znh/fa1/dyfl.htm">阿毅导航</a></th>
+<th><a target="_blank" rel="noopener" href="https://tools.miku.ac/">米库工具</a></th>
+<th><a target="_blank" rel="noopener" href="https://5iux.cn/">5iux导航</a></th>
+<th><a target="_blank" rel="noopener" href="https://www.hifast.cn/">快导航</a></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://www.xfisher.com/">咸鱼导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.chaidu.com/">柴都导航</a></td>
+<td><a target="_blank" rel="noopener" href="http://daohang.dadiyouhui.cn/daohang/sou.html">常用工具导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://jubt.cf/cn/index.html">聚BT</a></td>
+<td><a target="_blank" rel="noopener" href="http://www.frontendjs.com/">前站导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.28so.cn/">技术导航</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://c.24kdh.com/">24K导航</a></td>
+<td><a target="_blank" rel="noopener" href="http://ilxdh.com/">龙轩导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://adzhp.cn/">爱达杂货铺</a></td>
+<td><a target="_blank" rel="noopener" href="http://dh.51dyyg.cn/dans/3.html">帝云导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://kim.plopco.com/">KIM</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.bidianer.com/">笔点</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://kyon945.ys168.com/">储物间</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/23289709">知乎收藏</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.tool22.com/">兔儿工具</a></td>
+<td><a target="_blank" rel="noopener" href="https://orxing.top/nav/">不可思议导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://nav.hzwdd.cn/">西瓜导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.xiacoo.com/">虾库网</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://nav.iowen.cn/">一位导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://n6app.com/">牛6导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://nav.hzwdd.cn/">西瓜导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://zxmee.com/">经典工具</a></td>
+<td><a target="_blank" rel="noopener" href="http://www.aldh.cn/">阿里导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.juzip.cn/">橘子皮</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="http://qiaomuyun.cn/">乔木云导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://eesdh.com/">一舍导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://6iu.cn/">iu导航</a></td>
+<td><a target="_blank" rel="noopener" href="http://hao.tiegg.cn/">铁哥哥</a></td>
+<td><a target="_blank" rel="noopener" href="http://www.nvhacker.com/">女黑客导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://www.smoxo.cn/">神马导航</a></td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://www.yiw1.com/">伊万导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://ionego.net/">OneGo</a></td>
+<td><a target="_blank" rel="noopener" href="http://wanyouw.com/">万有导航</a></td>
+<td><a target="_blank" rel="noopener" href="https://webjike.com/">小呆呆</a></td>
+<td><a target="_blank" rel="noopener" href="https://noisevip.cn/">noise</a></td>
+<td><a target="_blank" rel="noopener" href="https://yamadie.net/">yama</a></td>
+</tr>
+<tr>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+</tr>
+<tr>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+<td><a href=""></a></td>
+</tr>
+</tbody></table></div><p class="readmore"><a href="/2020/09/21/30300b5a.html">Mehr lesen</a></p></div><div class="post"><h1 class="post-title"><a href="/2020/09/21/a48a4354.html">no-title</a></h1><div class="post-meta">2020-09-21</div><div class="post-content"><p>简单说几款个人使用的手机软件，娱乐也好，休闲也罢，总之个人觉得使用频率较高，故推荐之</p>
+<p>​    </p>
+<h3 id="Via浏览器"><a href="#Via浏览器" class="headerlink" title="Via浏览器"></a>Via浏览器</h3><p>​    作为一款浏览器，以其极小的占用（4.0.6版本2.21Mb）实现了浏览器该有的功能，界面简单没有广告，可以自定义导航页（以后在具体细谈）满足个人日常浏览。</p>
+<p>​</div><p class="readmore"><a href="/2020/09/21/a48a4354.html">Mehr lesen</a></p></div><nav class="page-navigator"><a class="extend prev" rel="prev" href="/page/3/">Vorheriger</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Nächster</a></nav></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIUI/">MIUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MarkDown/">MarkDown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RL/">RL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 15px;">浏览器</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px;">教程</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">学习</a> <a href="/tags/MIUI/" style="font-size: 15px;">MIUI</a> <a href="/tags/MarkDown/" style="font-size: 15px;">MarkDown</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 15px;">语法</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/RL/" style="font-size: 15px;">RL</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 15px;">导航</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 15px;">软件</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 15px;">电脑</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/springboot/" style="font-size: 15px;">springboot</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/03/4a17b156.html">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/01/8d39085b.html">Linux部署git与Nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/08/27/87d44b9d.html">MIUI教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/06/01/9211474f.html">linux commd</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/05/a54293f2.html">Springboot笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/15/217f21be.html">DRL笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/01/514027fa.html">Hexo部署到阿里云OSS上</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/28/ef00c80b.html">LayUI入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/23/44737761.html">小米手机刷机入门指北（小白向）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/20/a2f6ccf6.html">layuiAdmin pro v1.x 【单页版】开发者文档</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example2.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example3.com/" title="相关链接" target="_blank">相关链接</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">NoteBook.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>

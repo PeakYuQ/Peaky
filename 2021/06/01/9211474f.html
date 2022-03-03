@@ -1,0 +1,460 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="There is no description"><title> | NoteBook</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="/css/dark.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+var toggle = document.querySelector('.darkmode-toggle');
+var html = document.querySelector('html');
+
+html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+
+toggle.addEventListener('click', () => {
+localStorage.dark = !(html.dataset.dark == 'true');
+html.dataset.dark = localStorage.dark;
+});</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NoteBook</h1><a id="logo" href="/.">NoteBook</a><p class="description">Always believe that something wonderful is about to hanppen!</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-meta">2021-06-01<span> | </span><span class="category"><a href="/categories/Linux/">Linux</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 3.5k</span><span class="post-meta-item-text"> Words</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 17</span><span class="post-meta-item-text"> Minutes</span></span></span></div><a class="disqus-comment-count" href="/2021/06/01/9211474f.html#vcomment"><span class="valine-comment-count" data-xid="/2021/06/01/9211474f.html"></span><span> Comment</span></a><div class="post-content"><blockquote>
+<p>record all common commands</p>
+</blockquote>
+<span id="more"></span>
+
+
+
+
+
+<h4 id="权限相关"><a href="#权限相关" class="headerlink" title="权限相关"></a>权限相关</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">创建用户组</span> </span><br><span class="line">sudo groupadd 组名</span><br><span class="line"><span class="meta">#</span><span class="language-bash"></span></span><br><span class="line"><span class="language-bash"></span><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">更改文件的所属用户组</span></span><br><span class="line">sudo chgrp -R 组名 目录</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">更改文件夹的权限 -R 递归</span></span><br><span class="line">sudo chmod 770 -R 目录/文件名</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">为用户添加用户组</span></span><br><span class="line">sudo usermod -a -G 用户名 用户组</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">新建用户并加入用户组</span></span><br><span class="line">sudo adduser -u 用户名 -G 用户组</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看torch版本，cuda是否可用</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="built_in">print</span>(torch.__version__)</span><br><span class="line"><span class="built_in">print</span>(torch.cuda.is_available())</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="UPC-GPU账号认证服务没有开启，"><a href="#UPC-GPU账号认证服务没有开启，" class="headerlink" title="UPC GPU账号认证服务没有开启，"></a>UPC GPU账号认证服务没有开启，</h4><p>开启方法是：使用root登录master，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -X io01</span><br><span class="line">vmware</span><br></pre></td></tr></table></figure>
+<p>开启服务，关闭界面（后台运行vmware）</p>
+<h4 id="SH"><a href="#SH" class="headerlink" title="SH"></a>SH</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">亮屏状态下：screen=`dumpsys window policy | grep mIsShowing | grep <span class="string">&#x27;false&#x27;</span>`   亮屏下有返回值mIsShowing=<span class="literal">false</span></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">返回</span></span><br><span class="line">input keyevent BACK</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">am force-stop com.eg.android.AlipayGphone</span><br><span class="line">sleep 3</span><br><span class="line">am start com.eg.android.AlipayGphone/.FastStartActivity</span><br><span class="line">sleep 3</span><br><span class="line">am startservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line">sleep 1</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">启动与停止服务</span></span><br><span class="line">am startservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line">am stopservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line"></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/system/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">唤醒屏幕的脚本</span></span><br><span class="line">LogDir=&quot;/sdcard/Android/Peak/run.log&quot;</span><br><span class="line">startTime=$(date +%m/%d-%H:%M:%S) </span><br><span class="line">echo $startTime&quot; : Start Keep Screen ON &quot; &gt;&gt; $LogDir</span><br><span class="line">screen=`dumpsys window policy | grep mIsShowing | grep &#x27;false&#x27;`   </span><br><span class="line"></span><br><span class="line">if [ -z $screen ]</span><br><span class="line">then</span><br><span class="line">  echo &quot; Now screen is OFF,try to start！&quot; &gt;&gt; $LogDir</span><br><span class="line">  input keyevent 26</span><br><span class="line">  sleep 1</span><br><span class="line">  input swipe 800 2000 800 1200</span><br><span class="line">  sleep 1</span><br><span class="line">else</span><br><span class="line">  echo &quot; Now screen is On,it&#x27;s OK! &quot; &gt;&gt; $LogDir</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">com.eg.android.AlipayGphone</span><br><span class="line"></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/system/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">唤起支付宝脚本</span></span><br><span class="line">LogDir=&quot;/sdcard/Android/Peak/run.log&quot;</span><br><span class="line">startTime=$(date +%m/%d-%H:%M:%S) </span><br><span class="line">echo $startTime&quot; : Start Ali Now &quot; &gt;&gt; $LogDir</span><br><span class="line">COUNT=$(ps -ef |grep payGphone |grep -v &quot;grep&quot; |wc -l)</span><br><span class="line">screen=`dumpsys window policy | grep mIsShowing | grep &#x27;false&#x27;`   </span><br><span class="line"></span><br><span class="line">if [ -z $screen ]</span><br><span class="line">then</span><br><span class="line">  echo &quot; Now screen is OFF,try to start！&quot; &gt;&gt; $LogDir</span><br><span class="line">  input keyevent 26</span><br><span class="line">  sleep 1</span><br><span class="line">  input swipe 800 2000 800 1200</span><br><span class="line">  sleep 1</span><br><span class="line">else</span><br><span class="line">  echo &quot; Now screen is On,it&#x27;s OK! &quot; &gt;&gt; $LogDir</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">if [ $COUNT -ne 0 ] ;then</span><br><span class="line">    echo &quot; Ali is runing!&quot; &gt;&gt; $LogDir</span><br><span class="line">    am stopservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line">    sleep 1</span><br><span class="line">    am startservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line">else</span><br><span class="line">    echo &quot; Ali is not run, try to start！&quot; &gt;&gt; $LogDir</span><br><span class="line">    am start com.eg.android.AlipayGphone/.FastStartActivity</span><br><span class="line">    sleep 1</span><br><span class="line">    input keyevent BACK</span><br><span class="line">    am startservice com.eg.android.AlipayGphone/com.alipay.android.launcher.service.LauncherService</span><br><span class="line">    sleep 1</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/system/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">关闭耗电应用 准备睡觉 QQ 微信 音乐 支付宝 并清理垃圾</span></span><br><span class="line">LogDir=&quot;/sdcard/Android/Peak/run.log&quot;</span><br><span class="line">startTime=$(date +%m/%d-%H:%M:%S) </span><br><span class="line">echo $startTime&quot; : Start Sleep to stop APP&quot; &gt;&gt; $LogDir</span><br><span class="line"></span><br><span class="line">am force-stop com.eg.android.AlipayGphone</span><br><span class="line">am force-stop com.tencent.mm</span><br><span class="line">am force-stop com.tencent.mobileqq</span><br><span class="line">am force-stop com.netease.cloudmusic</span><br><span class="line"></span><br><span class="line">LogDir=&quot;/sdcard/Android/Peak/run.log&quot;</span><br><span class="line">startTime=$(date +%m/%d-%H:%M:%S) </span><br><span class="line">echo $startTime&quot; : Fuck file&quot; &gt;&gt; $LogDir</span><br><span class="line"><span class="meta"># </span><span class="language-bash"> 加载配置文件</span></span><br><span class="line">source /data/adb/modules/CrondStart/sh/FUCK-XXX.conf</span><br><span class="line"><span class="meta"># </span><span class="language-bash"> 读取配置文件</span></span><br><span class="line">for i in $sdcard $Download $Android $SelfDefinition; do</span><br><span class="line"> rm -rf $i ; </span><br><span class="line">done</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/system/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">启动常用软件放到后台并锁屏</span></span><br><span class="line">LogDir=&quot;/sdcard/Android/Peak/run.log&quot;</span><br><span class="line">startTime=$(date +%m/%d-%H:%M:%S) </span><br><span class="line">echo $startTime&quot; : Start some APP to background &quot; &gt;&gt; $LogDir</span><br><span class="line">screen=`dumpsys window policy | grep mIsShowing | grep &#x27;false&#x27;`   </span><br><span class="line">am start com.tencent.mm/.ui.LauncherUI</span><br><span class="line">sleep 10</span><br><span class="line">input keyevent BACK</span><br><span class="line">am start com.netease.cloudmusic/.activity.LoadingActivity</span><br><span class="line">sleep 10</span><br><span class="line">input keyevent BACK</span><br><span class="line">am force-stop com.netease.cloudmusic</span><br><span class="line">am force-stop com.eg.android.AlipayGphone</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if [ -z $screen ]</span><br><span class="line">then</span><br><span class="line">  echo &quot; Now screen is OFF,done！&quot; &gt;&gt; $LogDir</span><br><span class="line">else</span><br><span class="line">  echo &quot; Now screen is On,take it OFF! &quot; &gt;&gt; $LogDir</span><br><span class="line">  input keyevent 26</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="Win11关闭小组件"><a href="#Win11关闭小组件" class="headerlink" title="Win11关闭小组件"></a>Win11关闭小组件</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">管理员权限打开powershell，输入以下命令：</span></span><br><span class="line">Get-AppxPackage -Name &quot;MicrosoftWindows.Client.WebExperience&quot; -AllUsers | Remove-AppxPackage -AllUsers</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="ssh远程链接服务器，避免因断网而中断训练de-方法"><a href="#ssh远程链接服务器，避免因断网而中断训练de-方法" class="headerlink" title="ssh远程链接服务器，避免因断网而中断训练de 方法"></a>ssh远程链接服务器，避免因断网而中断训练de 方法</h3><hr>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">1 链接服务器.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">2 利用screen 命令 ，重起一个新的screen.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">新screen的名字，可以任起</span></span><br><span class="line"></span><br><span class="line">screen -S name </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">3 开始训练.</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">4 可以断开terminal，此时训练不受影响</span> </span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">恢复</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">1 启动terminal，查看存在的screen的命令.</span></span><br><span class="line"></span><br><span class="line">screen -ls</span><br><span class="line"></span><br><span class="line">screen -r 30362</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">2 断开当前的screen.</span></span><br><span class="line">按 Ctrl + A， 然后 K 键 然后 y 键</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="杀掉端口"><a href="#杀掉端口" class="headerlink" title="杀掉端口"></a>杀掉端口</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo fuser -k -n tcp 5000</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="Vmware-workstation-16许可证"><a href="#Vmware-workstation-16许可证" class="headerlink" title="Vmware workstation 16许可证"></a>Vmware workstation 16许可证</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ZF3R0-FHED2-M80TY-8QYGC-NPKYF</span><br><span class="line">YF390-0HF8P-M81RQ-2DXQE-M2UT6</span><br><span class="line">ZF71R-DMX85-08DQY-8YMNC-PPHV8</span><br><span class="line"></span><br><span class="line">前面的如果已经失效，用下面的</span><br><span class="line"></span><br><span class="line">FA1M0-89YE3-081TQ-AFNX9-NKUC0</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="CentOS-8安装docker"><a href="#CentOS-8安装docker" class="headerlink" title="CentOS 8安装docker"></a>CentOS 8安装docker</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">更新yum 安装依赖</span></span><br><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">添加yum源</span></span><br><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">安装</span></span><br><span class="line">yum install docker-ce</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">启动并设置开机自启动</span></span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl enable docker</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">验证</span></span><br><span class="line">docker version</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">安装青龙面板</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">安装nvjdc   目录之间映射关系</span></span><br><span class="line">docker run   --name nvjdc -p 5702:80 -d  -v  /home/qyf/workspace/nvjdc/Config.json:/app/Config/Config.json:ro \-v /home/qyf/workspace/nvjdc/.local-chromium:/app/.local-chromium  \-it --privileged=true  nolanhzy/nvjdc:0.8</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">安装chromium</span></span><br><span class="line">docker container ls -a</span><br><span class="line"> yum install unzip</span><br><span class="line"> cd /home/qyf/workspace/nvjdc/</span><br><span class="line"> mkdir -p  .local-chromium/Linux-884014 &amp;&amp; cd .local-chromium/Linux-884014</span><br><span class="line"> wget https://mirrors.huaweicloud.com/chromium-browser-snapshots/Linux_x64/884014/chrome-linux.zip &amp;&amp; unzip chrome-linux.zip</span><br><span class="line"> unzip chrome-linux.zip</span><br><span class="line"> docker restart nvjdc</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">reboot后如何重新启用青龙面板</span> </span><br><span class="line">docker exec -it qinglong bash</span><br><span class="line">cd /ql/ninja/backend</span><br><span class="line">pm2 start</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">docker exec -it qinglong nginx -c /etc/nginx/nginx.conf</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">查看防火墙某个端口是否开放</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --query-port=3306/tcp</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">开放防火墙端口3306</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">注意：开放端口后要重启防火墙生效</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">重启防火墙</span></span><br><span class="line"></span><br><span class="line">systemctl restart firewalld</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">关闭防火墙端口</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --remove-port=3306/tcp --permanent</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">查看防火墙状态</span></span><br><span class="line"></span><br><span class="line">systemctl status firewalld</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">关闭防火墙</span></span><br><span class="line"></span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">打开防火墙</span></span><br><span class="line"></span><br><span class="line">systemctl start firewalld</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">开放一段端口</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --add-port=40000-45000/tcp --permanent</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">查看开放的端口列表</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --list-ports</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">查看被监听(Listen)的端口</span></span><br><span class="line"></span><br><span class="line">netstat -lntp</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">检查端口被哪个进程占用</span></span><br><span class="line"></span><br><span class="line">netstat -lnp|grep 3306</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 id="UPC"><a href="#UPC" class="headerlink" title="UPC"></a>UPC</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">监控服务启动  status状态</span></span><br><span class="line">/etc/init.d/jhinsight-jhdc start</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h4 id="Conda-迁移"><a href="#Conda-迁移" class="headerlink" title="Conda 迁移"></a>Conda 迁移</h4><p>Step1：在想要迁移的虚拟环境sample中安装conda-pack工具包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">source activate sample</span><br><span class="line">conda install conda-pack</span><br><span class="line">conda install -c conda-forge conda-pack</span><br></pre></td></tr></table></figure>
+
+<p>或者采用pip安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install conda-pack  #pip install git+https://github.com/conda/conda-pack.git</span><br></pre></td></tr></table></figure>
+
+<p>Step2：将当前虚拟环境sample打包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda-pack</span><br><span class="line">ls</span><br><span class="line"><span class="meta"># </span><span class="language-bash">example.tar.gz 即为打包完成的输出文件</span></span><br><span class="line">source deactivate</span><br></pre></td></tr></table></figure>
+
+<p>Step3：将example.tar.gz迁移到其他路径或其他机器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv example.tar.gz ~/computer_two</span><br></pre></td></tr></table></figure>
+
+<p>Step4：在另一台机器上解包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd ~/computer_two/</span><br><span class="line"><span class="meta"># </span><span class="language-bash">example.tar.gz 即为迁移过来的环境包</span></span><br><span class="line">mkdir myenv</span><br><span class="line">tar -xf example.tar.gz -C myenv</span><br><span class="line">ls</span><br><span class="line"><span class="meta"># </span><span class="language-bash">example.tar.gz myenv</span></span><br></pre></td></tr></table></figure>
+
+<p>Step5：激活虚拟环境</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source myenv/bin/activate</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="修改IP地址"><a href="#修改IP地址" class="headerlink" title="修改IP地址"></a>修改IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">ip addr  #查看当前网卡名</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"># </span><span class="language-bash">- 修改网卡配置文件</span></span><br><span class="line"></span><br><span class="line">vi /etc/sysconfig/network-scripts/ifcfg-ens192 </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">BOOTPROTO=static 		# 网络模式 -- 固定</span><br><span class="line">ONBOOT=yes 				# 重启更新</span><br><span class="line">IPADDR=192.168.8.75 	# 配置当前节点 IP</span><br><span class="line">NETMASK=255.255.255.0 	# 子网掩码</span><br><span class="line">GATEWAY=192.168.1.1 	# 网关</span><br><span class="line">DNS1=8.8.8.8 			# dns</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">创建用户加入用户组</span></span><br><span class="line"></span><br><span class="line">sudo adduser user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">为用户创建密码方法如下</span></span><br><span class="line">sudo passwd user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">删除用户</span></span><br><span class="line">sudo userdel -r user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">为用户添加sudo</span></span><br><span class="line">sudo usermod -a -G wheel user1</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">重启网卡</span></span><br><span class="line"></span><br><span class="line">systemctl restart network</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="版本-内核"><a href="#版本-内核" class="headerlink" title="版本 内核"></a>版本 内核</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">unme -a #查看内核版本</span><br><span class="line"></span><br><span class="line">CentOS Linux release 8.4.2105</span><br><span class="line"></span><br><span class="line">cat /etc/redhat-release</span><br><span class="line"></span><br><span class="line">cat /etc/*release #查看系统版本</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="GPU运行"><a href="#GPU运行" class="headerlink" title="GPU运行"></a>GPU运行</h2><p>nvidia-smi</p>
+<h2 id="配置vnc"><a href="#配置vnc" class="headerlink" title="配置vnc"></a>配置vnc</h2><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/xuanbjut/p/14289178.html">https://www.cnblogs.com/xuanbjut/p/14289178.html</a></p>
+<p>添加用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/tigervnc/vncserver.users</span><br><span class="line"></span><br><span class="line">:1=qyf   #对应5901端口</span><br></pre></td></tr></table></figure>
+
+<p>拷贝模板</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo cp /usr/lib/systemd/system/vncserver@.service /etc/systemd/system/vncserver@1.service</span><br><span class="line"><span class="meta"># </span><span class="language-bash">@1.service 对应：1用户</span></span><br></pre></td></tr></table></figure>
+
+<p>设置密码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vncpasswd</span><br><span class="line"></span><br><span class="line">sudo systemctl start vncserver@:1  #对应：1用户</span><br><span class="line"></span><br><span class="line">设置开机启动</span><br><span class="line">sudo systemctl enable vncserver@:1</span><br></pre></td></tr></table></figure>
+
+<p>开启服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl start vncserver@:1</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">sudo systemctl start vncserver@:1.service</span></span><br></pre></td></tr></table></figure>
+
+<p>查看端口</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tulpn | grep vnc</span><br></pre></td></tr></table></figure>
+
+<p>配置防火墙</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo firewall-cmd --permanent --add-service vnc-server</span><br><span class="line">sudo firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="miniconda安装"><a href="#miniconda安装" class="headerlink" title="miniconda安装"></a>miniconda安装</h2><p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/</a></p>
+<p>下载conda</p>
+<h2 id="查看进程"><a href="#查看进程" class="headerlink" title="查看进程"></a>查看进程</h2><p>jps</p>
+<h2 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h2><p>sudo systemctl stop firewalld</p>
+<p>start开启</p>
+<h2 id="windows-minconda安装"><a href="#windows-minconda安装" class="headerlink" title="windows minconda安装"></a>windows minconda安装</h2><p><a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/102564715">https://zhuanlan.zhihu.com/p/102564715</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">首先在conda的终端激活自己想要迁移的环境</span><br><span class="line"></span><br><span class="line">conda activate your_env</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">然后生成自己的环境文件</span><br><span class="line"></span><br><span class="line">conda env export &gt; your_env.yaml</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">在另一台机器上的conda终端克隆迁移的环境即可</span><br><span class="line"></span><br><span class="line">conda env create -f your_env.yaml</span><br><span class="line">pip导出安装的库到requirements.txt</span><br><span class="line"></span><br><span class="line"> pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="GPU路径"><a href="#GPU路径" class="headerlink" title="GPU路径"></a>GPU路径</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line">currenth = <span class="string">&#x27;/hpcfiles/users/qyf/project/DeepRL_Algorithms-master&#x27;</span></span><br><span class="line">sys.path.append(currenth)</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="快速跳转到上N层目录"><a href="#快速跳转到上N层目录" class="headerlink" title="快速跳转到上N层目录"></a>快速跳转到上N层目录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line">结尾添加别名</span><br><span class="line">alias cd1=&#x27;cd ..&#x27;</span><br><span class="line">alias cd2=&#x27;cd ../..&#x27;</span><br><span class="line">alias cd3=&#x27;cd ../../..&#x27;</span><br><span class="line">alias cd4=&#x27;cd ../../../..&#x27;</span><br><span class="line">alias cd5=&#x27;cd ../../../../..&#x27;</span><br><span class="line">alias cd6=&#x27;cd ../../../../../..&#x27;</span><br><span class="line">使修改生效</span><br><span class="line">source .bashrc  或 source /etc/profile</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="GPU任务"><a href="#GPU任务" class="headerlink" title="GPU任务"></a>GPU任务</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">jhosts attrib -l 查看到所有资源包含cpu、内存、显卡等资源</span><br><span class="line">jjobs 不使用参数，显示目前正在排队或运行的作业 -a 显示最近完成的作业及正在运行或排队的作业 #-l 作业号 显示指定作业的详细信息</span><br><span class="line">jctrl kill &lt;作业号&gt; 强制杀掉指定的作业</span><br><span class="line">&lt;jsub&gt;： 提交作业</span><br><span class="line">&lt;-q normal&gt;： 指定 normal 队列</span><br><span class="line">&lt;-n 1&gt;： 指定该作业所需 1 核</span><br><span class="line">&lt;-e error.%J&gt;： 错误信息输出到 error.%J 文件中</span><br><span class="line">&lt;-o output.%J&gt;： 正确信息输出到 output.%J 文件中</span><br><span class="line">&lt;-J my_job&gt;： 指定作业名字为 my_job</span><br><span class="line">&lt;test&gt;： 执行的脚本</span><br><span class="line">提交任务</span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -q normal</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -n 2</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -e error.%J</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -o output.%J</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -J qyf_task</span></span><br><span class="line">source /apps/software/anaconda3/bin/activate torch</span><br><span class="line">python /hpcfiles/users/qyf/project/DeepRL_Algorithms-master/Algorithms/pytorch/PPO/main.py &gt;&gt; train.log</span><br><span class="line"></span><br><span class="line">jsub &lt;./up.sh</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="gym环境"><a href="#gym环境" class="headerlink" title="gym环境"></a>gym环境</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">安装box2d</span></span><br><span class="line">pip install gym </span><br><span class="line">conda install swig</span><br><span class="line">pip install box2d box2d-kengz --user</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="HTML网页网课加速助手"><a href="#HTML网页网课加速助手" class="headerlink" title="HTML网页网课加速助手"></a>HTML网页网课加速助手</h2><p><strong>document.querySelector(‘video’).playbackRate &#x3D; 4.0;</strong></p>
+<h2 id="防火墙-1"><a href="#防火墙-1" class="headerlink" title="防火墙"></a>防火墙</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># </span><span class="language-bash">1.启动防火墙</span> </span><br><span class="line">systemctl start firewalld</span><br><span class="line"><span class="meta"># </span><span class="language-bash">2.禁用防火墙</span> </span><br><span class="line">systemctl stop firewalld</span><br><span class="line"><span class="meta"># </span><span class="language-bash">3.设置开机启动</span></span><br><span class="line">systemctl enable firewalld</span><br><span class="line"><span class="meta"># </span><span class="language-bash">4.停止并禁用开机启动</span> </span><br><span class="line">sytemctl disable firewalld</span><br><span class="line"><span class="meta"># </span><span class="language-bash">5.重启防火墙</span> </span><br><span class="line">firewall-cmd --reload</span><br><span class="line"><span class="meta">#</span><span class="language-bash">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="安装JAVA"><a href="#安装JAVA" class="headerlink" title="安装JAVA"></a>安装JAVA</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/lib</span><br><span class="line">sudo mkdir jvm #创建/usr/lib/jvm目录用来存放JDK文件</span><br><span class="line">sudo tar -zxvf ./jdk-8u291-linux-x64.tar.gz -C /usr/lib/jvm #解压</span><br><span class="line">vim ~/.bashrc #系统变量</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_291</span><br><span class="line">export JRE_HOME=$&#123;JAVA_HOME&#125;/jre</span><br><span class="line">export CLASSPATH=.:$&#123;JAVA_HOME&#125;/lib:$&#123;JRE_HOME&#125;/lib</span><br><span class="line">export PATH=$&#123;JAVA_HOME&#125;/bin:$PATH</span><br><span class="line">source ~/.bashrc	#立即生效</span><br><span class="line"><span class="meta">#</span><span class="language-bash">end</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="ssh-配置免密登录"><a href="#ssh-配置免密登录" class="headerlink" title="ssh 配置免密登录"></a>ssh 配置免密登录</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">cd ~/.ssh/        </span><br><span class="line"><span class="meta"># </span><span class="language-bash">若没有该目录，请先执行一次ssh localhost</span></span><br><span class="line">ssh-keygen -t rsa    </span><br><span class="line"><span class="meta"># </span><span class="language-bash">会有提示，都按回车即可</span></span><br><span class="line">cat ./id_rsa.pub &gt;&gt; ./authorized_keys  </span><br><span class="line"><span class="meta"># </span><span class="language-bash">加入授权</span></span><br><span class="line">chmod g-w ~ </span><br><span class="line"><span class="meta">#</span><span class="language-bash">修改权限SSH不希望home目录和~/.ssh目录对组有写权限</span></span><br><span class="line">chmod 700 ~/.ssh</span><br><span class="line">chmod 600 ~/.ssh/authorized_keys</span><br><span class="line"><span class="meta">#</span><span class="language-bash">结束</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2 id="linux用户创建"><a href="#linux用户创建" class="headerlink" title="linux用户创建"></a>linux用户创建</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo adduser user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">为用户创建密码方法如下</span></span><br><span class="line">sudo passwd user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">删除用户</span></span><br><span class="line">sudo userdel -r user1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">为用户添加sudo</span></span><br><span class="line">sudo usermod -a -G wheel user1</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mkdir a #创建文件夹</span><br><span class="line">rmdir a #删除文件夹</span><br><span class="line">mv a b	#改名，移动</span><br><span class="line">rm a #删除</span><br><span class="line">cp a b #复制文件或目录</span><br><span class="line">cat a #查看文件内容 </span><br><span class="line">touch a #修改文件时间或创建新文件</span><br><span class="line">tac a #反向查看文件内容</span><br><span class="line"></span><br><span class="line">grep -i &#x27;user&#x27; ~/.bashrc	#从文件内查找字符串</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="linux常用命令"><a href="#linux常用命令" class="headerlink" title="linux常用命令"></a>linux常用命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nvcc -V #查看cuda版本</span><br><span class="line">crontab -l #查看当前定时任务</span><br><span class="line">crontab -e #编辑当前定时任务</span><br><span class="line">conda create -n env-name python=2.7  #conda新建一个虚拟环境-n env-name是设置新建环境的名字，特定python版本</span><br><span class="line">conda activate env-name #激活指定虚拟环境</span><br><span class="line">conda deactivate #离开虚拟环境</span><br><span class="line">conda env list #可以列出你所创建的所有环境conda info --envs</span><br><span class="line">conda env remove -n env-name #删除指定的环境 </span><br></pre></td></tr></table></figure>
+
+
+<p>使用如下Conda命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n env2 --clone conda-env1</span><br></pre></td></tr></table></figure>
+
+<p>这里conda-env2是新创建的Conda环境，conda-env1是被复制的Conda环境，<br>复制完成后，两个环境的Python配置是完全相同的；</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">pip install package -i https://pypi.tuna.tsinghua.edu.cn/simple some-package #使用清华下载</span><br><span class="line">conda config --remove-key channels # 换回默认源(清除所有用户添加的镜像源路径，只保留默认的路径)</span><br><span class="line"><span class="meta">#</span><span class="language-bash">配置文件</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">全局的是在/etc目录下（/etc/profile）/etc/profile</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户个人的是在用户的家目录下（~/.profile）个人：<span class="built_in">cat</span> ~/.bash_profile</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户启动加载文件（~/.bashrc）<span class="built_in">cat</span> ~/.bashrc</span></span><br><span class="line">conda install --channel https://conda.anaconda.org/conda-forge pandas-alive=0.2.3conda install pandas_alive -c conda-forge</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"><span class="comment"># 镜像源</span></span></span><br><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ #删除镜像源,命令</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/</span><br><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --set show_channel_urls yes</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"><span class="comment"># 找不到模块</span></span></span><br><span class="line"></span><br><span class="line"> ModuleNotFoundError: No module named &#x27;XXX&#x27;  https://www.cnblogs.com/dreamyu/p/7889959.html</span><br><span class="line">import os,sys</span><br><span class="line">curPath = os.path.abspath(os.path.dirname(__file__))</span><br><span class="line">rootPath = os.path.split(curPath)[0]</span><br><span class="line">sys.path.append(rootPath)</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="language-bash">GPU上传作业</span></span><br><span class="line">jjobs -a	#查看作业</span><br><span class="line">jsub &lt; ./task.sh		#提交作业</span><br><span class="line"><span class="meta">#</span><span class="language-bash">提交作业</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">!/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB  -q normal</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -n 32</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -e error.%J</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -o output.%J</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">JSUB -J qyf_test</span></span><br><span class="line">python /hpcfiles/users/qyf/project/DC-DRL/common_modules/agent.py &gt; log.log</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">显示变量</span></span><br><span class="line">echo $PATH</span><br><span class="line">方法1</span><br><span class="line"><span class="meta">#</span><span class="language-bash">配置完后可以通过<span class="built_in">echo</span> <span class="variable">$PATH</span>查看配置结果。</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">生效方法：立即生效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">有效期限：临时改变，只能在当前的终端窗口中有效，当前窗口关闭后就会恢<span class="comment">#复原有的path配置</span></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户局限：仅对当前用户</span></span><br><span class="line">export PATH=/usr/local/bin:$PATH</span><br><span class="line">方法2</span><br><span class="line"><span class="meta">#</span><span class="language-bash">通过修改.bashrc文件:</span></span><br><span class="line">vim ~/.bashrc </span><br><span class="line"><span class="meta">#</span><span class="language-bash">在最后一行添上：</span></span><br><span class="line">export PATH=/usr/local/eclipse:$PATH</span><br><span class="line"><span class="meta">#</span><span class="language-bash">生效方法：（有以下两种）</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">1、关闭当前终端窗口，重新打开一个新终端窗口就能生效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">2、输入“<span class="built_in">source</span> ~/.bashrc”命令，立即生效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">有效期限：永久有效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户局限：仅对当前用户</span></span><br><span class="line">方法3</span><br><span class="line"><span class="meta">#</span><span class="language-bash">通过修改profile文件:</span></span><br><span class="line">vim /etc/profile</span><br><span class="line">export PATH=/usr/local/bin:$PATH</span><br><span class="line"><span class="meta">#</span><span class="language-bash">生效方法：系统重启</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">有效期限：永久有效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户局限：对所有用户</span></span><br><span class="line">方法4</span><br><span class="line"><span class="meta">#</span><span class="language-bash">通过修改environment文件:</span></span><br><span class="line">vim /etc/environment</span><br><span class="line">在PATH=&quot;/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin&quot;中加入 </span><br><span class="line">&quot;:/usr/local/bin&quot;</span><br><span class="line"><span class="meta">#</span><span class="language-bash">生效方法：系统重启</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">有效期限：永久有效</span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">用户局限：对所有用户</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash"><span class="comment"># 常使用的tar压缩命令为</span></span>  </span><br><span class="line">tar -zcvf  压缩名.tar.gz  文件/目录</span><br><span class="line"></span><br><span class="line">.tar.gz文件，这种文件是tar文件的压缩文件，可以使用tar命令进行解压。解压：</span><br><span class="line">tar -zxvf pythontab.tar.gz</span><br><span class="line">单纯的.gz文件解压，这种文件不可以使用tar命令解压，需要用gunzip解压，使用命令gzip</span><br><span class="line">解压：gzip -d pythontab.gz</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">使用zip进行压缩的时候命令格式为</span>   </span><br><span class="line">zip -q -r 压缩包名.zip   目录/文件名</span><br><span class="line"><span class="meta">#</span><span class="language-bash">解压</span></span><br><span class="line">unzip</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">解压文件tgz</span><br><span class="line">例如文件名为: yyyy.tgz</span><br><span class="line">先使用GZIP解压为TAR文件</span><br><span class="line">gzip -dv yyyy.tgz</span><br><span class="line">同时解压后生成yyyy.tar文件</span><br><span class="line">再使用tar解压yyyy.tar文件</span><br><span class="line">tar xvf yyyy.tar</span><br><span class="line">解压下边的命令：</span><br><span class="line">gzip -dv R220-ESiVision-WebEnv-X86-Linux.tgz</span><br><span class="line">tar xvf R220-ESiVision-WebEnv-X86-Linux.tar</span><br><span class="line"></span><br><span class="line">压缩：tgz文件。</span><br><span class="line">tar -czvf R220-ESiVision-WebEnv-X86-Linux.tgz apache-tomcat-5.5.23 jdk1.5.0_12 net-snmp-5.1.1</span><br><span class="line">tar -czvf filename.tgz file</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="language-bash">修改文件权限</span></span><br><span class="line">chmod 777 makePlus.sh</span><br><span class="line"></span><br><span class="line">查看系统版本/os</span><br><span class="line">cat /proc/version</span><br><span class="line">cat /etc/redhat-release</span><br><span class="line">uname -a 显示如下</span><br><span class="line"> uname -r</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="找不到包"><a href="#找不到包" class="headerlink" title="找不到包"></a>找不到包</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -- coding: utf-8 --</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> os,sys</span><br><span class="line">curPath = os.path.abspath(os.path.dirname(file))</span><br><span class="line">rootPath = os.path.split(curPath)[<span class="number">0</span>]</span><br><span class="line">sys.path.append(rootPath)</span><br><span class="line"><span class="comment">#sys.path.append(&#x27;./common&#x27;)</span></span><br><span class="line"><span class="keyword">import</span> os,sys</span><br><span class="line">curPath = os.path.abspath(os.path.dirname(file))</span><br><span class="line"><span class="built_in">print</span>(curPath)</span><br><span class="line">rootPath1 = os.path.split(curPath)[<span class="number">0</span>]</span><br><span class="line">rootPath2 = os.path.split(rootPath1)[<span class="number">0</span>]</span><br><span class="line"><span class="built_in">print</span>(rootPath2)</span><br><span class="line">pathaa = <span class="string">&#x27;/hpcfiles/users/qyf/test/DeepRL_Algorithms-master&#x27;</span></span><br><span class="line">sys.path.append(pathaa)<span class="comment">#地址</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+</div><div class="tags"><a href="/tags/Linux/"><i class="fa fa-tag"></i>Linux</a></div><div class="post-nav"><a class="pre" href="/2021/08/27/87d44b9d.html"></a><a class="next" href="/2021/05/05/a54293f2.html"></a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'c2tSICknvMNwQOvqeqh8wYoi-9Nh9j0Va',
+  appKey:'geSzJMrX46ogsQR590PTiGPF',
+  placeholder:'Just so so',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIUI/">MIUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MarkDown/">MarkDown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RL/">RL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 15px;">浏览器</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px;">教程</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">学习</a> <a href="/tags/MIUI/" style="font-size: 15px;">MIUI</a> <a href="/tags/MarkDown/" style="font-size: 15px;">MarkDown</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 15px;">语法</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/RL/" style="font-size: 15px;">RL</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 15px;">导航</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 15px;">软件</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 15px;">电脑</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/springboot/" style="font-size: 15px;">springboot</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/03/4a17b156.html">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/01/8d39085b.html">Linux部署git与Nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/08/27/87d44b9d.html">MIUI教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/06/01/9211474f.html">linux commd</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/05/a54293f2.html">Springboot笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/15/217f21be.html">DRL笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/01/514027fa.html">Hexo部署到阿里云OSS上</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/28/ef00c80b.html">LayUI入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/23/44737761.html">小米手机刷机入门指北（小白向）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/20/a2f6ccf6.html">layuiAdmin pro v1.x 【单页版】开发者文档</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example2.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example3.com/" title="相关链接" target="_blank">相关链接</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">NoteBook.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="There is no description"><title> | NoteBook</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="/css/dark.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><div class="darkmode-toggle">🌓</div><script>var prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+var toggle = document.querySelector('.darkmode-toggle');
+var html = document.querySelector('html');
+
+html.dataset.dark = localStorage.dark || prefersDarkMode.matches;
+
+toggle.addEventListener('click', () => {
+localStorage.dark = !(html.dataset.dark == 'true');
+html.dataset.dark = localStorage.dark;
+});</script><meta name="generator" content="Hexo 6.0.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">NoteBook</h1><a id="logo" href="/.">NoteBook</a><p class="description">Always believe that something wonderful is about to hanppen!</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-meta">2020-10-16<span> | </span><span class="category"><a href="/categories/python/">python</a></span><script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span><span class="post-time"><span class="post-meta-item-text"> | </span><span class="post-meta-item-icon"><i class="fa fa-keyboard-o"></i><span class="post-count"> 1.4k</span><span class="post-meta-item-text"> Words</span></span></span><span class="post-time"> | <span class="post-meta-item-icon"><i class="fa fa-clock-o"></i><span class="post-count"> 5</span><span class="post-meta-item-text"> Minutes</span></span></span></div><a class="disqus-comment-count" href="/2020/10/16/7336dcda.html#vcomment"><span class="valine-comment-count" data-xid="/2020/10/16/7336dcda.html"></span><span> Comment</span></a><div class="post-content"><h3 id="day1"><a href="#day1" class="headerlink" title="day1"></a>day1</h3><h4 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h4><p>crtl + &#x2F;       #单行注释</p>
+<p>’‘’ 这是多行注释‘’‘        #  ’‘’ ‘’‘ 表示多行注释</p>
+<h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><p>用来存储数据，不需要定义</p>
+<p>a &#x3D; 10</p>
+<p>a &#x3D; 100 </p>
+<span id="more"></span>
+
+<p>a &#x3D; ‘你好，世界！’</p>
+<p>规则：以字母(区分大小写)或者下划线开头，可以包含数字      # 变量名 &#x3D; 数据        a,b &#x3D; 10,5</p>
+<p>规范：小驼峰命名： userName     #第一个单词首字母小写，之后单子首字母大写</p>
+<h4 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h4><p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016104505966.png" alt="image-20201016104505966"></p>
+<p>type(变量)        #用来查看变量的类型</p>
+<h5 id="元组类型-tuple"><a href="#元组类型-tuple" class="headerlink" title="元组类型-tuple"></a>元组类型-tuple</h5><p>b&#x3D;()</p>
+<p>当只有一个元素时，需要加逗号    #b &#x3D; (4,)</p>
+<p>一经创建不可修改（元组内的列表的话，可以修改） </p>
+<p>b[-2: -1:]     #输出-2 - -1的元素</p>
+<p>0   1  2   3  4  5</p>
+<p>-6 -5 -4 -3 -2 -1</p>
+<p>内置函数：count()    #统计元素出现的次数</p>
+<p>index(x)    #索引第一个x的下标</p>
+<h5 id="列表类型-list"><a href="#列表类型-list" class="headerlink" title="列表类型-list"></a>列表类型-list</h5><p>c&#x3D;[]</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201017091303817.png" alt="image-20201017091303817"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">len</span>(a)	<span class="comment">#统计长度</span></span><br><span class="line"><span class="built_in">type</span>(a)	<span class="comment">#类型</span></span><br><span class="line"><span class="built_in">print</span>(a*<span class="number">3</span>) 	<span class="comment">#列表内内容复制3倍输出</span></span><br><span class="line"><span class="keyword">del</span> a[<span class="number">2</span>:<span class="number">10</span>]		<span class="comment">#删除列表中第2-9个数据</span></span><br><span class="line">a.append(b) a.extend(b)	<span class="comment">#前者加了一个[],后者在list内扩展</span></span><br><span class="line">remove() pop()	<span class="comment">#前者是指定值，后者指定索引</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="字典类型-dict"><a href="#字典类型-dict" class="headerlink" title="字典类型-dict"></a>字典类型-dict</h5><p>d&#x3D;{}</p>
+<p>{key:value，key2:valuue2}     #键值对的集合    value可重复，key不可重复（元组，字符串）    可以增删改</p>
+<p>keys()    values()    items（）#获取所有的键,值，键值对</p>
+<h5 id="共用方法-in"><a href="#共用方法-in" class="headerlink" title="共用方法 + * in"></a>共用方法 + * in</h5><p>+合并</p>
+<p>*复制</p>
+<p>in 对象是否存在         a in list  #a是否存在在list’中 返回bool</p>
+<h4 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h4><p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016111325023.png" alt="image-20201016111325023"></p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016111649754.png" alt="image-20201016111649754"></p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016111858256.png" alt="image-20201016111858256"></p>
+<p>not &gt; and &gt; or</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016112235537.png" alt="image-20201016112235537"></p>
+<h4 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h4><p>print(内容)                #自带换行效果    \n换行效果 </p>
+<p>print(内容,end &#x3D; “ “)     #打印完打出空格</p>
+<p>用%占位符做输出</p>
+<p>print(‘我是%s,来自%s’%(name,city))</p>
+<p>print(‘我是{}’.format(变量) )                #{}.format(变量)         #输出</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016112822357.png" alt="image-20201016112822357"></p>
+<h4 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h4><p>name &#x3D; input(提示语)  默认接受str类型数据</p>
+<p>其他类型输入需要加强转</p>
+<p>name &#x3D; int (input(提示语) )        #传入int</p>
+<h4 id="条件控制"><a href="#条件控制" class="headerlink" title="条件控制"></a>条件控制</h4><p>pass #用pass语句跳出循环</p>
+<h5 id="单分支"><a href="#单分支" class="headerlink" title="单分支"></a>单分支</h5><p>if 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<h5 id="双分支"><a href="#双分支" class="headerlink" title="双分支"></a>双分支</h5><p>if 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>else：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<h5 id="多分支"><a href="#多分支" class="headerlink" title="多分支"></a>多分支</h5><p>if 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>elif 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>elif 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>……</p>
+<h4 id="循环控制"><a href="#循环控制" class="headerlink" title="循环控制"></a>循环控制</h4><p>while 表达式：</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>for … in 循环对象</p>
+<p>​    语句1</p>
+<p>​    语句2</p>
+<p>pass结束本次缩进</p>
+<p>break退出本层循环</p>
+<p>continue跳过本次循环</p>
+<p>import random</p>
+<p>a &#x3D; random.randit(0,100)  #随机数库</p>
+<p>range(1,100) &lt;range对象&gt;从1-100的对象集合</p>
+<h4 id="高级数据类型操作"><a href="#高级数据类型操作" class="headerlink" title="高级数据类型操作"></a>高级数据类型操作</h4><p>序列，python提供3种字符串、元组、列表，可以进行切片根据索引（0 - n-1）</p>
+<h5 id="字符串基本操作"><a href="#字符串基本操作" class="headerlink" title="字符串基本操作"></a>字符串基本操作</h5><p>切片[start: end: ​step] step 默认是1</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201016203405705.png" alt="image-20201016203405705"></p>
+<h3 id="day2"><a href="#day2" class="headerlink" title="day2"></a>day2</h3><h4 id="字符串基本操作-1"><a href="#字符串基本操作-1" class="headerlink" title="字符串基本操作"></a>字符串基本操作</h4><p>str.find(‘字符(串)’)     #查找是否在字符串中 返回第一个下标从0开始，未找到返回-1</p>
+<p>str.index(‘字符(串)’)    #查找是否在字符串中 返回第一个下标从0开始，未找到报错</p>
+<p>切片操作</p>
+<p>slice  [start: end:step​] </p>
+<p>[start:end]     #取 [start,end) 的字符串</p>
+<p>[start:]     #取 start到结尾的字符串</p>
+<p>[:end]     #取 [0,end) 的字符串</p>
+<p>[::-1]    #倒叙输出</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#定义</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">func名</span>(<span class="params">参数列表</span>):	<span class="comment">#可以定默认值 a=10（调用时不输入形参即调用默认值）， </span></span><br><span class="line"></span><br><span class="line">	代码块				<span class="comment">#可以用可变参数*args不确定参数个数，必须放在 **kwages之前</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">pass</span>			   <span class="comment">#可以用 **kwages 表示参数是一个字典（传入时 **dict传入，或者name =&#x27;peter&#x27;,age = 16 传入）</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">func名(形参)			 <span class="comment">#调用</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>函数返回值 </p>
+<p>return后的代码都不会执行</p>
+<p>如果有多个数据需要返回，直接返回元组、字典或者列表都可！</p>
+<p>如果在函数内部需要对全局变量进行修改的话需要声明global</p>
+<p>type()    #查看类型</p>
+<p>id()    #查找地址</p>
+<p>匿名函数：lambda 参数列表：表达式</p>
+<p>ex：    test &#x3D; lambda x,y: x+y</p>
+<p>调用： test(3,4)</p>
+<h4 id="三元式"><a href="#三元式" class="headerlink" title="三元式"></a>三元式</h4><p>x if x&gt;y else y</p>
+<p>应用匿名函数ex：直接调用</p>
+<p>test &#x3D; (lambda x,y: x+y)(3,4)</p>
+<p>递归实例 模拟实现树形结构的 遍历</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os		<span class="comment">#引入文件操作模块</span></span><br><span class="line"></span><br><span class="line">listRs = os.listdir(path)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h4><p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201018191614678.png" alt="image-20201018191614678"></p>
+<p>eval 动态执行一个字符串表达式返回值</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201018194516657.png" alt="image-20201018194516657"></p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201018194855306.png" alt="image-20201018194855306"></p>
+<p>all()     #对序列判断 &#x3D;&#x3D; 逻辑操作and    只要包含 0、空、false就返回False</p>
+<p>any()    #对序列判断 &#x3D;&#x3D; 逻辑操作or    只有仅包含 0、空、false就返回False</p>
+<p>sorted(list,reverse &#x3D; true)    #排序，默认时false升序</p>
+<p>zip()         #将2个序列按照索引合并成一个序列组，个数按照少的来</p>
+<p>enumerate(list,start&#x3D;0)    #将序列和开始位置的索引合并成一个序列</p>
+<h4 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h4><p>set1 &#x3D; {1，2，3，4}    #元素不重复，无序且不支持索引和切片</p>
+<p>dict1 &#x3D; {1:2}    #字典</p>
+<h3 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h3><h4 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h4><p>#object oriented programmer</p>
+<p><img src="https://pic-20201016.oss-cn-qingdao.aliyuncs.com/img/image-20201018211412291.png" alt="image-20201018211412291"></p>
+<p>定义类    类名采用大驼峰命名</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">    属性方法</span></span><br><span class="line"><span class="string">    &#x27;&#x27;&#x27;</span></span><br><span class="line">    name = <span class="string">&#x27;name&#x27;</span></span><br><span class="line">    age = <span class="number">18</span></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">speak</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;fuck&#x27;</span>)</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    </span><br><span class="line">     <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self,name,age</span>):</span><br><span class="line">        self.sex = <span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line">        self.age = age</span><br><span class="line">        self.name = name</span><br><span class="line">        <span class="keyword">pass</span>						<span class="comment">#初始化方法，定义属性，自动调用 ==构造函数</span></span><br><span class="line"><span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="day4"><a href="#day4" class="headerlink" title="day4"></a>day4</h3><h4 id="关于numpy"><a href="#关于numpy" class="headerlink" title="关于numpy"></a>关于numpy</h4><p>安装numpy：    conda install numpy</p>
+<p>使用 </p>
+<p>import numpy as np</p>
+<p>np.random.rand(a,b)        #生成a行b列的随机向量</p>
+<p>np.random.randint(a,b)    #生成a-b之间的一个随机数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#向量生成</span></span><br><span class="line">A = np.array([[<span class="number">12</span>,<span class="number">23</span>,<span class="number">34</span>,<span class="number">45</span>],[<span class="number">21</span>,<span class="number">32</span>,<span class="number">24</span>,<span class="number">56</span>],[<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">44</span>]])</span><br><span class="line"><span class="comment">#求和按照行（列） axis=1（0）</span></span><br><span class="line">A.<span class="built_in">sum</span>(axis=<span class="number">0</span>)</span><br><span class="line">A = np.random.randn(<span class="number">5</span>)		<span class="comment">#随机生成5个高斯变量 if have 2 vairble，can become 5*1 向量</span></span><br><span class="line">A.reshape(a,b)	<span class="comment">#将A装换成a行b列向量</span></span><br><span class="line">A.T 	<span class="comment">#表示转置</span></span><br><span class="line">np.dot(A,A.T)	<span class="comment">#表示矩阵乘法</span></span><br><span class="line"><span class="keyword">assert</span>(A.shape == (a,b))	<span class="comment">#判断是不是a*b的向量</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+</div><div class="tags"><a href="/tags/%E5%AD%A6%E4%B9%A0/"><i class="fa fa-tag"></i>学习</a><a href="/tags/python/"><i class="fa fa-tag"></i>python</a></div><div class="post-nav"><a class="pre" href="/2020/10/29/4eec164c.html"></a><a class="next" href="/2020/10/02/51a34670.html"></a></div><div id="vcomment"></div><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script><script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script><script>var notify = 'false' == 'true' ? true : false;
+var verify = 'false' == 'true' ? true : false;
+var GUEST_INFO = ['nick','mail','link'];
+var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+  return GUEST_INFO.indexOf(item) > -1
+});
+guest_info = guest_info.length == 0 ? GUEST_INFO :guest_info;
+window.valine = new Valine({
+  el:'#vcomment',
+  notify:notify,
+  verify:verify,
+  appId:'c2tSICknvMNwQOvqeqh8wYoi-9Nh9j0Va',
+  appKey:'geSzJMrX46ogsQR590PTiGPF',
+  placeholder:'Just so so',
+  avatar:'mm',
+  guest_info:guest_info,
+  pageSize:'10'
+})
+</script></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="search-form"><input id="local-search-input" placeholder="Search" type="text" name="q" results="0"/><div id="local-search-result"></div></div></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> Kategorien</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MIUI/">MIUI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/MarkDown/">MarkDown</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/RL/">RL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AF%BC%E8%88%AA/">导航</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%95%99%E7%A8%8B/">教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%94%B5%E8%84%91/">电脑</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BD%AF%E4%BB%B6/">软件</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> Tags</i></div><div class="tagcloud"><a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 15px;">浏览器</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/%E6%95%99%E7%A8%8B/" style="font-size: 15px;">教程</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">学习</a> <a href="/tags/MIUI/" style="font-size: 15px;">MIUI</a> <a href="/tags/MarkDown/" style="font-size: 15px;">MarkDown</a> <a href="/tags/%E8%AF%AD%E6%B3%95/" style="font-size: 15px;">语法</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/RL/" style="font-size: 15px;">RL</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">编程</a> <a href="/tags/%E5%AF%BC%E8%88%AA/" style="font-size: 15px;">导航</a> <a href="/tags/%E8%BD%AF%E4%BB%B6/" style="font-size: 15px;">软件</a> <a href="/tags/%E7%94%B5%E8%84%91/" style="font-size: 15px;">电脑</a> <a href="/tags/%E6%97%A5%E5%B8%B8/" style="font-size: 15px;">日常</a> <a href="/tags/springboot/" style="font-size: 15px;">springboot</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> Letzte</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2022/03/03/4a17b156.html">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2022/03/01/8d39085b.html">Linux部署git与Nodejs</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/08/27/87d44b9d.html">MIUI教程</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/06/01/9211474f.html">linux commd</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/05/05/a54293f2.html">Springboot笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/15/217f21be.html">DRL笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/03/01/514027fa.html">Hexo部署到阿里云OSS上</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/28/ef00c80b.html">LayUI入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/23/44737761.html">小米手机刷机入门指北（小白向）</a></li><li class="post-list-item"><a class="post-list-link" href="/2021/01/20/a2f6ccf6.html">layuiAdmin pro v1.x 【单页版】开发者文档</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> Blogroll</i></div><ul></ul><a href="http://www.example1.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example2.com/" title="相关链接" target="_blank">相关链接</a><ul></ul><a href="http://www.example3.com/" title="相关链接" target="_blank">相关链接</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2022 <a href="/." rel="nofollow">NoteBook.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><link rel="stylesheet" type="text/css" href="/css/search.css?v=1.0.0"><script type="text/javascript" src="/js/search.js?v=1.0.0"></script><script>var search_path = 'search.xml';
+if (search_path.length == 0) {
+   search_path = 'search.xml';
+}
+var path = '/' + search_path;
+searchFunc(path, 'local-search-input', 'local-search-result');
+</script><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
