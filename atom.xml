@@ -6,7 +6,7 @@
   <link href="http://peaky2022.gitee.io/peaky/atom.xml" rel="self"/>
   
   <link href="http://peaky2022.gitee.io/peaky/"/>
-  <updated>2022-03-03T15:01:47.876Z</updated>
+  <updated>2022-03-28T03:04:49.230Z</updated>
   <id>http://peaky2022.gitee.io/peaky/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>EC Abstract</title>
+    <link href="http://peaky2022.gitee.io/peaky/2022/03/28/d285d8df.html"/>
+    <id>http://peaky2022.gitee.io/peaky/2022/03/28/d285d8df.html</id>
+    <published>2022-03-28T06:51:32.000Z</published>
+    <updated>2022-03-28T03:04:49.230Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>This is EC abstract</p></blockquote><span id="more"></span><p>摘要</p><h4 id="A-New-Task-Scheduling-Scheme-Based-on-Genetic-Algorithm-for-Edge-Computing："><a href="#A-New-Task-Scheduling-Scheme-Based-on-Genetic-Algorithm-for-Edge-Computing：" class="headerlink" title="A New Task Scheduling Scheme Based on Genetic Algorithm for Edge Computing："></a>A New Task Scheduling Scheme Based on Genetic Algorithm for Edge Computing：</h4><p>随着智能电网和全球能源互联技术的不断发展，智能终端数量已连接到电网，可用于提供资源服务作为边缘节点。传统的云计算可以用来在电网中提供存储服务和任务计算服务，但是它面临着资源瓶颈，时滞和有限的网络带宽资源等挑战。边缘计算是云计算的有效补充，因为它可以为用户提供具有较低延迟的本地计算服务。但是，由于单边缘节点中的资源有限，资源密集型任务需要分为多个子任务，然后通过资源协作分配给不同的边缘节点。使任务调度更有效是一个重要问题。本文基于边缘计算的概念，提出了一种双层资源管理方案。另外，基于遗传算法，提出了一种名为GA-EC（边缘计算遗传算法）的新任务调度算法，该算法可以根据不同的调度目标动态调度任务。仿真结果表明，该算法对能耗和负载平衡有一定的影响，减少了时延</p><h4 id="Task-Scheduling-in-Deadline-Aware-Mobile-Edge-Computing-Systems"><a href="#Task-Scheduling-in-Deadline-Aware-Mobile-Edge-Computing-Systems" class="headerlink" title="Task Scheduling in Deadline-Aware Mobile Edge Computing Systems"></a>Task Scheduling in Deadline-Aware Mobile Edge Computing Systems</h4><p>移动边缘计算（MEC）是一种新的计算方法，其中移动设备（MD）携带的计算任务可以卸载到MEC服务器或本地计算。由于MDs始终受到电池限制，计算任务有严格的最后期限，因此如何有效地安排每个任务的执行非常重要。与现有工作相比，我们考虑了一个复杂得多的场景，其中多个移动MDs共享多个异构MEC服务器，并且在截止日期感知MEC系统中提出了一个名为最小能耗问题的问题。这种问题被证明是NP难的，并且分别针对单个和多个MD场景提出了两种近似算法。这些算法的性能因理论分析和仿真而异。</p><h4 id="Deep-Reinforcement-Learning-Based-Task-Scheduling-in-Edge-Computing-Networks"><a href="#Deep-Reinforcement-Learning-Based-Task-Scheduling-in-Edge-Computing-Networks" class="headerlink" title="Deep Reinforcement Learning Based Task Scheduling in Edge Computing Networks"></a>Deep Reinforcement Learning Based Task Scheduling in Edge Computing Networks</h4><p>随着5G移动网络服务的快速发展，海量数据在网络边缘爆炸式增长。云计算服务的延迟时间长，带宽要求大。边缘计算已成为减少5G移动网络服务延迟和流量负载的关键技术。然而，如何在边缘计算环境中智能地安排任务仍然是一项关键挑战。在本文中，我们定义了云边缘网络体系结构中最小化任务调度延迟的优化问题。这个问题被证明是NP难的，并按照马尔可夫决策过程建模。我们设计了一种基于异步优势演员批评（CECSA3C）的云边协作调度算法。仿真结果表明，与现有的DQN和RL-G算法相比，该算法收敛速度快，任务处理时间平均缩短28.3%和46.1%，同时保持了性能的可扩展性。</p><h4 id="Profit-Maximized-Collaborative-Computation-Offloading-and-Resource-Allocation-in-Distributed-Cloud-and-Edge-Computing-Systems"><a href="#Profit-Maximized-Collaborative-Computation-Offloading-and-Resource-Allocation-in-Distributed-Cloud-and-Edge-Computing-Systems" class="headerlink" title="Profit-Maximized Collaborative Computation Offloading and Resource Allocation in Distributed Cloud and Edge Computing Systems"></a>Profit-Maximized Collaborative Computation Offloading and Resource Allocation in Distributed Cloud and Edge Computing Systems</h4><p>边缘计算是一种新架构，可提供用于实现物联网的计算，存储和网络资源。它将计算带到用户附近的网络边缘。但是，边缘节点的能源和资源有限。在边缘完全运行任务可能会导致性能不佳。云数据中心（CDC）拥有丰富的执行任务资源，但它们位于远离用户的地方。疾病预防控制中心导致长时间的传输延迟和利用资源的巨大财务成本。因此，在CDC层和边缘计算层之间智能卸载用户的任务至关重要。这项工作提出了一个云边缘计算系统，它有一个终端层，边缘计算层和CDC层。在此基础上，设计了一种利润最大化的协作计算卸载和资源分配算法，以最大限度地提高系统的利润，保证严格满足任务的响应时间限制。在每个时隙中，这项工作共同考虑CPU，内存和带宽资源，边缘层中所有异构节点的负载平衡，最大能量，最大服务器数量以及CDC层中的任务队列稳定性。考虑到上述因素，通过提出的基于模拟退火的候鸟优化程序来制定和解决单目标约束优化问题，以获得接近最优的解决方案。所提出的方法实现了CDC与边缘计算卸载的联合优化，以及CDC中的资源分配。现实的基于数据的仿真结果表明，它实现了比同龄人更高的利润。</p><h4 id="Dynamic-Request-Scheduling-Optimization-in-Mobile-Edge-Computing-for-IoT-Applications"><a href="#Dynamic-Request-Scheduling-Optimization-in-Mobile-Edge-Computing-for-IoT-Applications" class="headerlink" title="Dynamic Request Scheduling Optimization in Mobile Edge Computing for IoT Applications"></a>Dynamic Request Scheduling Optimization in Mobile Edge Computing for IoT Applications</h4><p>在5G时代，随着对物联网（IoT）的计算和海量数据流量的需求不断增加，移动边缘计算（MEC）和超密集网络（UDN）被认为是两种有前途的技术，其中导致在所谓的超密集边缘计算（UDEC）中。任务卸载作为一种有效的解决方案，为UDEC网络中的移动用户提供了低延迟和灵活的计算。然而，边缘云的有限计算资源和移动用户的动态需求使得将计算请求安排到适当的边缘云具有挑战性。为此，我们首先为移动用户制定传输功率分配（PA）问题，以最大限度地降低能耗。使用准凸技术，我们解决了PA问题，并提出了一个基于子梯度（NCGG）的非合作博弈模型。然后，我们将联合请求卸载和资源调度（JRORS）问题建模为一个混合集成非线性程序，以尽量减少请求的响应延迟。JRORS问题可以分为两个问题，即请求卸载（RO）问题和计算资源调度（RS）问题。因此，我们将JRORS问题分析为双重决策问题，并提出了一种基于i-NSGA-II的多目标优化算法，称为MO-NSGA。仿真结果表明，NCGG可以节省传输能耗，具有良好的收敛性，MO-NSGA在响应速率方面优于现有方法，并且可以在动态UDEC网络中保持良好的性能。</p><h4 id="Deep-Reinforcement-Learning-Based-Offloading-Scheduling-for-Vehicular-Edge-Computing"><a href="#Deep-Reinforcement-Learning-Based-Offloading-Scheduling-for-Vehicular-Edge-Computing" class="headerlink" title="Deep-Reinforcement-Learning-Based Offloading Scheduling for Vehicular Edge Computing"></a>Deep-Reinforcement-Learning-Based Offloading Scheduling for Vehicular Edge Computing</h4><p>车辆边缘计算（VEC）是一种新的计算范例，具有很大的潜力来增强车辆终端（VT）在低延迟和高能量效率的车辆应用中支持资源匮乏的能力。在本文中，我们研究了典型VEC场景中的一个重要的计算卸载调度问题，其中沿着快速行驶的VT打算安排其排队等待的任务，以便在任务延迟和能源消耗。由于不同的任务特征，动态无线环境以及由车辆移动引起的频繁切换事件，最佳解决方案应该考虑在哪里安排（即本地计算或卸载）以及何时安排（即执行的顺序和时间）每个任务。为了解决这样一个复杂的随机优化问题，我们通过精心设计的马尔可夫决策过程（MDP）对其进行建模，并求助于深度强化学习（DRL）来处理巨大的状态空间。我们的DRL实现是基于最先进的近端策略优化（PPO）算法设计的。利用参数共享网络体系结构结合卷积神经网络（CNN）来逼近策略函数和值函数，可以有效地提取代表性特征。对状态和奖励表示进行了一系列调整，以进一步提高培训效率。广泛的仿真实验和与六种已知基线算法及其启发式组合的综合比较清楚地证明了所提出的基于DRL的卸载调度方法的优点。</p><h4 id="Evaluation-of-T-ask-Scheduling-Algorithms-in-Heterogeneous-Computing-Environments"><a href="#Evaluation-of-T-ask-Scheduling-Algorithms-in-Heterogeneous-Computing-Environments" class="headerlink" title="Evaluation of T ask Scheduling Algorithms in Heterogeneous Computing Environments"></a>Evaluation of T ask Scheduling Algorithms in Heterogeneous Computing Environments</h4><p>这项工作建立了一套方法来评估异构计算环境中任何任务调度策略的性能。我们正式提出了混合边缘云计算生态系统的调度模型，并在大工作量上进行基于仿真的实验。除了传统的云数据中心之外，我们还考虑边缘数据中心，包括智能手机和Raspberry Pi edge设备，这些设备都是电池供电的。定义计算资源的现实能力。一旦找到时间表，资源容量就可以或不能满足各种任务需求。我们构建了一个调度和评估框架，并测量了典型的调度指标，如平均等待时间，平均周转时间，makespan，循环吞吐量，最短作业时间，最小最小和最大最小调度方案。我们的分析和结果表明，与仅云介质相比，最先进的独立任务调度算法在异构边缘云介质中的数据中心的重大任务故障和非最佳资源利用方面遭受性能下降。特别是，对于大量任务，由于电池容量低或内存有限，每个调度方案无法执行超过25%的任务。</p><h4 id="Deep-Reinforcement-Learning-for-Collaborative-Edge-Computing-in-V-ehicular-Networks"><a href="#Deep-Reinforcement-Learning-for-Collaborative-Edge-Computing-in-V-ehicular-Networks" class="headerlink" title="Deep Reinforcement Learning for Collaborative Edge Computing in V ehicular Networks"></a>Deep Reinforcement Learning for Collaborative Edge Computing in V ehicular Networks</h4><p>移动边缘计算（MEC）是支持任务关键车辆应用（如智能路径规划和安全应用）的有前途的技术。本文开发了一种协作边缘计算框架，以减少计算服务延迟，提高车辆网络的服务可靠性。首先，提出一种任务分区和调度算法（TPSA）来决定工作量分配，并在给定计算卸载策略的情况下，将卸载到边缘服务器的任务的执行顺序安排给边缘服务器。其次，开发了一种基于人工智能（AI）的协作计算方法来确定车辆的任务卸载，计算和结果传递策略。具体而言，卸载和计算问题被表述为马尔可夫决策过程。采用深度强化学习技术，即深度确定性策略梯度，在复杂的城市交通网络中寻找最优解决方案。通过我们的方法，可以通过协作计算中的最佳工作负载分配和服务器选择来最小化包括计算服务延迟和服务故障罚分的服务成本。仿真结果表明，所提出的基于AI的协作计算方法可以适应具有出色性能的高动态环境。</p><h4 id="Assignment-of-IoT-Nodes-to-Edge-Computing-Devices-in-Internet-of-Things"><a href="#Assignment-of-IoT-Nodes-to-Edge-Computing-Devices-in-Internet-of-Things" class="headerlink" title="Assignment of IoT Nodes to Edge Computing Devices in Internet of Things"></a>Assignment of IoT Nodes to Edge Computing Devices in Internet of Things</h4><p>物联网（IoT）是一种描述将物理对象连接到互联网的想法的计算概念。一般来说，物联网是一个设备网络-每个对象都通过互联网或一些非互联网导向的连接（如蓝牙，ZigBee等）连接。它具有互联网连接的IP地址，并且这些对象之间发生通信和其他互联网启用的设备和系统。物联网通常用于监控实时环境，从而生成大量数据。由于其成本和容量优势，云是一种具有吸引力的物联网数据存储选项。但对于时间关键的应用程序，这可能是一个挑战。边缘计算是解决这个问题的方法。边缘计算是指在网络边缘计算靠近其创建位置的数据，而不是远离中心点的数据。然后将计算和处理的数据发送到云。为了实现这一点，物联网节点必须连接到边缘计算设备。然而，识别每个物联网节点应该连接的边缘计算设备（ECD）是一项挑战。这项工作描述了一种基于动态阈值将物联网节点分配给ECD的方法，并且应用元启发式来安排任务以使完成时间最短。基于仿真的结果显示了所提出工作的优点。</p><h4 id="Task-Scheduling-for-Edge-Computing-with-Agile-VNFs-On-Demand-Service-Model-toward-5G-and-Beyond"><a href="#Task-Scheduling-for-Edge-Computing-with-Agile-VNFs-On-Demand-Service-Model-toward-5G-and-Beyond" class="headerlink" title="Task Scheduling for Edge Computing with Agile VNFs On-Demand Service Model toward 5G and Beyond"></a>Task Scheduling for Edge Computing with Agile VNFs On-Demand Service Model toward 5G and Beyond</h4><p>随着互联网的快速发展，满足服务请求，有效分配计算资源和按需服务应用的需求不断增加。边缘计算用于满足低延迟，网络连接和本地数据处理要求，并减轻云中的工作量。本文提出了一种基于网关的边缘计算服务模型，以减少数据传输的延迟和往返云的网络带宽。通过轻量级虚拟化技术Docker调整边缘网关的任务计划，可以实现按需计算资源分配。边缘网关还可以处理本地网络中的服务请求。所提出的边缘计算服务模型不仅消除了传统云服务模型的计算负担，而且提高了边缘计算节点的运行效率。该模型还可用于5G及以上云边缘计算环境中的各种创新应用。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;This is EC abstract&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="Study" scheme="http://peaky2022.gitee.io/peaky/categories/Study/"/>
+    
+    
+    <category term="Study" scheme="http://peaky2022.gitee.io/peaky/tags/Study/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux部署git与Nodejs</title>
@@ -550,30 +573,6 @@
     
     
     <category term="导航" scheme="http://peaky2022.gitee.io/peaky/tags/%E5%AF%BC%E8%88%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>手机好软推荐</title>
-    <link href="http://peaky2022.gitee.io/peaky/2020/09/21/a48a4354.html"/>
-    <id>http://peaky2022.gitee.io/peaky/2020/09/21/a48a4354.html</id>
-    <published>2020-09-21T12:52:44.000Z</published>
-    <updated>2022-03-03T15:01:47.703Z</updated>
-    
-    <content type="html"><![CDATA[<p>简单说几款个人使用的手机软件，娱乐也好，休闲也罢，总之个人觉得使用频率较高，故推荐之</p><p>​    </p><h3 id="Via浏览器"><a href="#Via浏览器" class="headerlink" title="Via浏览器"></a>Via浏览器</h3><p>​    作为一款浏览器，以其极小的占用（4.0.6版本2.21Mb）实现了浏览器该有的功能，界面简单没有广告，可以自定义导航页（以后在具体细谈）满足个人日常浏览。</p><p>​    <span id="more"></span></p><p>​    其次支持加载插件，是不是有油猴那味了，点到为止，可以自行添加脚本，不知道油猴的可以看我另一篇帖子<a href="https://fengzi.store/2020/09/20/ed6dfd6e.html">关于油猴</a>。</p><p>​    另外一大亮点就是资源嗅探功能，像Chrome配合IDM下载B站视频音频，下载某些网站的图片等等（择日细谈-IDM的应用），恰如此，配合手机端IDM，Via嗅探的资源也可以进行下载，在此不多赘述。</p><p>​    </p><p>​    体积小巧，功能强大，理想的手机浏览器不过如此，早年征战的红米手机3卡的不行，用这个浏览器还相当顺手。Next</p><h3 id="时光相册"><a href="#时光相册" class="headerlink" title="时光相册"></a>时光相册</h3><p>​    </p><p>​    最近手机重新刷机，恢复了一个上古备份（去年7月的备份，为何最近没有备份呢？因为已经1年没有折腾主力机了），其中就有该软件，打开后看到了最早是2016年的照片，手机里存的相片基本上上传到云端了，不管现在手机里面还有没有的照片，现在看4年前的自己，还有这4年间的一些点滴生活，觉得这特么就是回忆呀！</p><p>​    简单介绍，链接WiFi自动给备份照片，但好像空间有上限，我的打开有20G的空间，不过才用了不到6G，每天签到给50Mb，应该还算可以吧。总之，将照片上传到云可以节省本地空间吗哈哈！</p><h3 id="天翼云盘"><a href="#天翼云盘" class="headerlink" title="天翼云盘"></a>天翼云盘</h3><p>​    不喜欢度盘的限速，100k警告！</p><p>​    天翼云盘的容量相对来说少了很多，注册送60G空间，然后参见活动可以领一个1T的空间，就这些了，在不付费的情况下就是1T多点，是度盘的1&#x2F;5，但据说能够薅羊毛，第一批用户好像能薅羊毛到30T，但我入的晚，没机会了，每天签到领150Mb左右，目前空间已经1.22T了，主要是下载跟上传速度很快，基本不限速，使用体验很好！</p><h3 id="最右"><a href="#最右" class="headerlink" title="最右"></a>最右</h3><p>​    我的快乐源泉，在这里能够遇到很多有趣的抽子（右友之间的称呼），里面的人又有才，说话又好听，我超级喜欢里面的，他们懂得又多，上知天文，下知地理，无所不能，涨姿势的同时还能笑口常开！</p><p>​    但不幸的是，广告无情的吞噬了它，但，我下载的5.0.0版本还是没有广告的，有时候不更新也不是一个坏习惯！</p><p>​    下载旧版应用可以通过 -应用汇 -APP -找旧版，然后选择你要选的版本下载安装。</p><h3 id="厚墨"><a href="#厚墨" class="headerlink" title="厚墨"></a>厚墨</h3><p>​    我较喜欢小说，这个是一个本地化的阅读器，简洁无广告，更可以订阅公众号的文章，然后是添加书源，可以在线搜书，看书，是我理想的小说阅读器，下面奉上我收集的书源：<a href="http://note.youdao.com/s/QMD4t6nB">下载地址</a>,另推荐个人喜欢的书：《尘缘》、《雪中悍刀行》、《神墓》、《遮天》</p><p>​    </p><h3 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h3><p>​    第三方微博客户端，主要是没广告，挺好用的，还有一个知否是知乎的第三方客户端，code+是CSDN的第三方客户端等等</p><p>​    还有一些是ROOT后才能用的软件，等我想想做好小米手机刷机教程后在写吧，先这样。</p><p><strong>本文作者：</strong> 驼峰先生</p><p><strong>本文链接：</strong> <a href="https://fengzi.store/2020/09/21/a48a4354.html">https://fengzi.store/2020/09/21/a48a4354.html</a></p><p><strong>版权声明：</strong> 本博客所有文章遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC 4.0 BY-SA</a> 版权协议。转载请注明出处！</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;简单说几款个人使用的手机软件，娱乐也好，休闲也罢，总之个人觉得使用频率较高，故推荐之&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;h3 id=&quot;Via浏览器&quot;&gt;&lt;a href=&quot;#Via浏览器&quot; class=&quot;headerlink&quot; title=&quot;Via浏览器&quot;&gt;&lt;/a&gt;Via浏览器&lt;/h3&gt;&lt;p&gt;​    作为一款浏览器，以其极小的占用（4.0.6版本2.21Mb）实现了浏览器该有的功能，界面简单没有广告，可以自定义导航页（以后在具体细谈）满足个人日常浏览。&lt;/p&gt;
-&lt;p&gt;​</summary>
-    
-    
-    
-    <category term="软件" scheme="http://peaky2022.gitee.io/peaky/categories/%E8%BD%AF%E4%BB%B6/"/>
-    
-    
-    <category term="软件" scheme="http://peaky2022.gitee.io/peaky/tags/%E8%BD%AF%E4%BB%B6/"/>
     
   </entry>
   
