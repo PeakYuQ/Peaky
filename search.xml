@@ -4,6 +4,181 @@
   
     
     <entry>
+      <title>API7</title>
+      <link href="/peaky/2022/09/20/f7569fb7.html"/>
+      <url>/peaky/2022/09/20/f7569fb7.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src='http://api.sangbo520.cn/API/sese/st.php';        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API6</title>
+      <link href="/peaky/2022/09/20/8051af21.html"/>
+      <url>/peaky/2022/09/20/8051af21.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src='http://tfkapi.top/API/setu_pic.php';        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API5</title>
+      <link href="/peaky/2022/09/20/1958fe9b.html"/>
+      <url>/peaky/2022/09/20/1958fe9b.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src='http://tfkapi.top/API/nypic.php';        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);        </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API4</title>
+      <link href="/peaky/2022/09/20/6e5fce0d.html"/>
+      <url>/peaky/2022/09/20/6e5fce0d.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>    $.ajax({      url: "https://ovooa.com/API/meinv/api.php",      type: "GET",      contextType: "application/json",      success: function (res) {        //获取返回数据        var json = res;        var data_link = json.data.image;        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src=data_link;        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);      },      error: function (err) {        alert("API is expire！")      }    });  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API3</title>
+      <link href="/peaky/2022/09/20/f03b5bae.html"/>
+      <url>/peaky/2022/09/20/f03b5bae.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>    $.ajax({      url: "https://ovooa.com/API/Pximg/",      type: "GET",      contextType: "application/json",      success: function (res) {        //获取返回数据        var json = res;        var data_link = json.data.urls.original;        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src=data_link;        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);      },      error: function (err) {        alert("API is expire！")      }    });  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API1</title>
+      <link href="/peaky/2022/09/20/1e353a82.html"/>
+      <url>/peaky/2022/09/20/1e353a82.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>    $.ajax({      url: "http://ovooa.com/API/cosplay/api.php",      type: "GET",      contextType: "application/json",      success: function (res) {        //获取返回数据        var json = res;        var title = json.data.Title;        var data_link = json.data.data;        //获取元素开始插入        var main = document.getElementById('peak');        //插入标题        //添加 div        var h1 = document.createElement("h1");        h1.setAttribute("class", "post-title");        h1.innerHTML = title;        main.appendChild(h1);        for (var i = data_link.length - 1; i >= 0; i--) {            var p = document.createElement("p");            var a = document.createElement("a");            var img = document.createElement("img");            //a.setAttribute("href", data_link[i]);            a.setAttribute("class", "fancybox");            a.setAttribute("rel", "gallery");            img.src=data_link[i];            a.appendChild(img);            p.appendChild(a);            main.appendChild(p);        }          },      error: function (err) {        alert("API is expire！")      }    });  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>API2</title>
+      <link href="/peaky/2022/09/20/873c6b38.html"/>
+      <url>/peaky/2022/09/20/873c6b38.html</url>
+      
+        <content type="html"><![CDATA[<div class="post">    <div class="post-content" id="peak">    </div>    </div><script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script><script>    $.ajax({      url: "https://ovooa.com/API/meizi/api.php",      type: "GET",      contextType: "application/json",      success: function (res) {        //获取返回数据        var json = res;        var data_link = json.text;        //获取元素开始插入        var main = document.getElementById('peak');        var p = document.createElement("p");        var a = document.createElement("a");        var img = document.createElement("img");        //a.setAttribute("href", data_link[i]);        a.setAttribute("class", "fancybox");        a.setAttribute("rel", "gallery");        img.src=data_link;        a.appendChild(img);        p.appendChild(a);        main.appendChild(p);      },      error: function (err) {        alert("API is expire！")      }    });  </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> HTML </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> HTML </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>日迹</title>
       <link href="/peaky/2022/04/09/1e5d734c.html"/>
       <url>/peaky/2022/04/09/1e5d734c.html</url>
